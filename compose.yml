@@ -1,0 +1,16 @@
+services:
+  app:
+    image: imranwebstudio/smartsolutiobs-frontend:latest
+    container_name: smartsolutiobs-frontend
+    ports:
+      - "3000:3000"
+    env_file:
+      - .env
+    restart: unless-stopped
+
+volumes:
+  app_data:
+
+networks:
+  default:
+    name: smartsolutions_network

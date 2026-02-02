@@ -1,0 +1,18 @@
+# !/bin/sh
+
+# Exit immediately if a command exits with a non-zero status.
+set -e
+
+# Linting and Fixing on staged files
+echo "🔍 Running lint-staged on staged files..."
+npm run lint -- scripts/ci-hooks.js
+
+echo "✅ Linting and fixes complete."
+
+# Type Checking
+echo "🧠 Checking types..."
+tsc --noEmit
+echo "✅ Type checking complete."
+
+# If everything passes, allow commit
+echo "✅ Proceeding with commit."
