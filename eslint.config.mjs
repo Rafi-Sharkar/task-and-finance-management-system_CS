@@ -3,6 +3,7 @@ import nextTs from "eslint-config-next/typescript";
 import prettier from "eslint-config-prettier/flat";
 import { defineConfig, globalIgnores } from "eslint/config";
 
+
 const eslintConfig = defineConfig([
   ...nextVitals,
   ...nextTs,

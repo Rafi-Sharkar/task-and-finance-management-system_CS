@@ -1,7 +1,7 @@
 services:
   app:
-    image: imranwebstudio/smartsolutiobs-frontend:latest
-    container_name: smartsolutiobs-frontend
+    image: rafisharkar/smartsolutions-frontend:latest
+    container_name: smartsolutions-frontend
     ports:
       - "3000:3000"
     env_file:
